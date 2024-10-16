@@ -3,5 +3,4 @@ export enum TipoContato{
     FAMILIA  = "Família", 
     TRABALHO = "Trabalho",
     OUTRO    = "Outro(a)"
-}
-
+} 
