@@ -48,18 +48,18 @@
 
     <table *ngIf="contatos.length > 0">
         <tr>
-            <th>Nome</th>
-            <th>Telefone</th>
-            <th>Email</th>
-            <th>Aniversário</th>
-            <th>Tipo</th>
+            <th class="th-resultados">Nome</th>
+            <th class="th-resultados">Telefone</th>
+            <th class="th-resultados">Email</th>
+            <th class="th-resultados">Aniversário</th>
+            <th class="th-resultados">Tipo</th>
         </tr>
         <tr *ngFor="let cc of contatos">
-            <td>{{cc.obter_nome()}}</td>
-            <td>{{cc.obter_telefone()}}</td>
-            <td>{{cc.obter_email()}}</td>
-            <td>{{cc.obter_aniversario()}}</td>
-            <td>{{cc.obter_tipo()}}</td>
+            <td class="td-resultados">{{cc.obter_nome()}}</td>
+            <td class="td-resultados">{{cc.obter_telefone()}}</td>
+            <td class="td-resultados">{{cc.obter_email()}}</td>
+            <td class="td-resultados">{{cc.obter_aniversario()}}</td>
+            <td class="td-resultados">{{cc.obter_tipo()}}</td>
         </tr>
     </table>
 </body>

@@ -6,9 +6,25 @@ label{
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 16px; 
 }
+th, td{
+    color: black; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 16px; 
+}
 input{
     padding-left: 20px;
 }
-tr{
+table{
+    background-color: rgb(0, 0, 0); 
+    margin-top: 10px; 
+    border-radius: 3px; 
+}
+.th-resultados{
+    padding-right: 50px;
+    background-color: rgb(95, 52, 248); 
     color: white;
 }
+.td-resultados{
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+} 
