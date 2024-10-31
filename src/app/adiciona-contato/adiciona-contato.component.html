@@ -41,9 +41,16 @@
                 <option *ngFor="let tp of tipos" [value]="tp">{{tp}}</option>
             </select>
         </div>
+        <!-- Favorito ou não -->
+        <div>
+            <input type="checkbox" name="fav" 
+                   id="fav" 
+                   #fav>
+            <label for="fav">Favorito</label>
+        </div>
 
         <input type="button" value="Cadastrar"
-            (click)="adicionar(nome.value, telefone.value, email.value, aniversario.value, tipo.value)">
+            (click)="adicionar(nome.value, telefone.value, email.value, aniversario.value, tipo.value, fav.checked)">
     </form>
 
     <table *ngIf="contatos.length > 0">
@@ -53,6 +60,7 @@
             <th class="th-resultados">Email</th>
             <th class="th-resultados">Aniversário</th>
             <th class="th-resultados">Tipo</th>
+            <th class="th-resultados">Favorito</th>
         </tr>
         <tr *ngFor="let cc of contatos">
             <td class="td-resultados">{{cc.obter_nome()}}</td>
@@ -60,6 +68,7 @@
             <td class="td-resultados">{{cc.obter_email()}}</td>
             <td class="td-resultados">{{cc.obter_aniversario()}}</td>
             <td class="td-resultados">{{cc.obter_tipo()}}</td>
+            <td class="td-resultados">{{cc.obter_fav()}}</td>
         </tr>
     </table>
 </body>

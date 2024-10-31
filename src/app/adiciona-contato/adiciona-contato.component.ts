@@ -10,13 +10,16 @@ import { Contato } from './contato';
 export class AdicionaContatoComponent {
   tipos: string[]
   contatos: Contato[]
+  favoritos: any
+agenda: any;
   constructor() {
     this.tipos = Object.values(TipoContato)
     this.contatos = []
+    this.favoritos = []; 
   }
 
-  adicionar(nome: string, telefone:string, email: string, aniversario: string, tipo: string) {
-    let pessoa = new Contato(nome, telefone, email, aniversario, this.getTipo(tipo))
+  adicionar(nome: string, telefone:string, email: string, aniversario: string, tipo: string, fav: boolean) {
+    let pessoa = new Contato(nome, telefone, email, aniversario, this.getTipo(tipo), fav)
     this.contatos.push(pessoa)
   }
 
